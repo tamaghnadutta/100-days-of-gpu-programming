@@ -55,19 +55,19 @@ Matrix B  ┌─────────┬─────────┐
 
 Let's follow block (0,0) which computes the top-left 4×4 tile of matrix C:
 
-Phase 1: First Tile Pair
+**Phase 1: First Tile Pair**
 
 - Load A tile (0,0) and B tile (0,0) into shared memory
 - Compute partial products using these tiles
 - Each thread accumulates results for its assigned element
 
-Phase 2: Second Tile Pair
+**Phase 2: Second Tile Pair**
 
 - Load A tile (0,1) and B tile (1,0) into shared memory
 - Compute partial products using these tiles
 - Each thread adds these results to its running sum
 
-Final Step:
+**Final Step:**
 
 Write the final accumulated sums to the corresponding elements in matrix C.
 
